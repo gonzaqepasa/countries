@@ -1,0 +1,24 @@
+.filter {
+    /* font-family     : Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+    /* font-size       : 2em; */
+    /* color           : white; */
+    /* margin          : 5px; */
+    /* background-color: rgba(255, 255, 1, 1); */
+    background-color: rgb(119, 119, 119);
+    /* box-shadow      : 0px 0px 10px   black; */
+
+    width           : 15vw;
+    height          : 92vh;
+    /* position        : absolute; */
+    /* right           : 1vw; */
+    /* top             : 10vh; */
+    /* display         : block; */
+    /* align-items     : center; */
+    /* justify-content : center; */
+    /* border-radius   : 10px; */
+    /* padding         : 0; */
+    /* text-transform  : capitalize; */
+    transition      : 0.5   s;
+    /* z-index: 150; */
+    
+}

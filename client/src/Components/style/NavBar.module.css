@@ -1,0 +1,25 @@
+.navi {
+    font-family        : fantasy;
+    /* color           : rgb(255, 255, 1); */
+    /* text-transform  : uppercase; */
+
+
+    background: rgb(0,61,5);
+    background: linear-gradient(90deg, rgba(0,61,5,1) 0%, rgba(23,192,37,1) 50%, rgba(0,61,5,1) 100%);ckground: linear-gradient(90deg, rgba(23,192,37,1) 0%, rgba(0,61,5,1) 50%, rgba(23,192,37,1) 100%);
+
+
+    /* background-color   : rgba(23, 192, 37); */
+    /* background-color   : black; */
+
+    /* opacity         : 0.9; */
+    box-shadow         : 0px 0px 10px black;
+    /* display         : flex; */
+    /* align-items     : center; */
+    /* justify-content : center; */
+    height             : 8vh;
+    width              : 100vw;
+    /* transition         : 1s; */
+}
+
+/* .navi:hover {
+    /* background-color: rgb(221, 4, 221); */
