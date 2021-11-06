@@ -1,14 +1,18 @@
 .App {
-  text-align         : center;
-  display            : flex;
-  /* background-color: chartreuse; */
-  flex-wrap          : wrap;
-  background-image   : url(./Components/style/countries.png);
-  background-size:150vh;
+  text-align           : center;
+  display              : flex;
+  /* background-color  : chartreuse; */
+  flex-wrap            : wrap;
+  background-image     : url(./Components/style/countrieswhite.png);
+  /* filter            : blur(50px); */
+  background-color     : black;
+
+  background-size       : 150vh;
   /* height             : 100vh; */
   /* width              : 100vw; */
-  background-attachment: fixed;
+  background-attachment : fixed;
 }
+
 
 
 .App-logo {

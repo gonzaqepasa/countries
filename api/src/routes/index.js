@@ -23,7 +23,7 @@ const getApiInfo = async () => {
             population: pais.population,
             continent: pais.continents[0],
             img: pais.flags.map(img => img),
-            flag: pais.flags[0]
+            flag: pais.flags[1]
         }
     });
 
@@ -87,7 +87,7 @@ router.get('/holaaa', async (req, res) => {
     // res.send(aux)
 
 
-res.send('Hola')
+    res.send('Hola')
 
 
 })
@@ -118,7 +118,7 @@ router.get('/countries', async (req, res) => {
 
 router.get('/countries/:id', async (req, res) => {
     let id = req.params.id
-    const allCountries = await getAllCountry();
+    const allCountries = await getDbInfo();
 
     if (id) {
         // const countriesFilter = allCountries.filter((p) => { p.id == id })
@@ -154,12 +154,11 @@ router.post('/activity', async (req, res) => {
 
 
 
-/* router.get('/countries', async (req, res) => {
-    const aux = await getApiInfo();
-    const aux2 = await getDbInfo();
-const concat = aux.concat(aux2)
-    res.send(concat)
-})
- */
+    router.get('/activities', async (req, res) => {
+        const aux2 = await getDbInfo();
+        const aux3 = aux2.map(p => p.activities)
+        res.send(aux3)
+    })
 
-module.exports = router;
+
+    module.exports = router;
