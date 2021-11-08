@@ -16,6 +16,7 @@ export default function Filter(props) {
 
 
 
+
     const [buscar, setBuscar] = useState('')
 
 
@@ -66,7 +67,7 @@ export default function Filter(props) {
                         <p className={style.avisoReset}>Reset</p>
 
                         <button className={style.reset} onClick={e => props.reset(e)}><GrUpdate /></button>
-                      
+
 
                     </div>
 

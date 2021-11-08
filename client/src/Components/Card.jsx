@@ -1,8 +1,8 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import style from './style/Card.module.css'
-import { onOffInfoChange } from "../actions/index.js";
-
+import { clearDetail, getDetail } from "../actions/index.js";
+import { Link } from 'react-router-dom'
 
 
 export default function Card(props) {
@@ -13,17 +13,28 @@ export default function Card(props) {
 
 
 
+    function handleinfo(id) {
+        dispatch(getDetail(id))
+    }
 
+
+
+
+
+
+
+    const asd = `/home/${props.id}`
     return (
         <div className={style.box}>
-
-            <div className={style.boxImg}>
-                <img className={style.img} src={props.flag} alt='no se encontro imagen' />
-            </div>
+            <Link to={asd} onClick={() => handleinfo(props.id)}>
+                <div className={style.boxImg}>
+                    <img className={style.img} src={props.flag} alt='no se encontro imagen' />
+                </div>
+            </Link>
 
 
             <div className={style.text}>
-                <button className={style.boton} onClick={() => dispatch(onOffInfoChange(props.id))}>{props.name}</button>
+                <h2 className={style.paisName} >{props.name}</h2>
 
 
                 <div className={style.barrita}></div>
@@ -34,7 +45,6 @@ export default function Card(props) {
 
 
 
-
-        </div>
+        </div >
     )
 }

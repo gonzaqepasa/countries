@@ -4,10 +4,10 @@ import { useDispatch, useSelector } from 'react-redux'
 // import { Link } from "react-router-dom";
 import style from './style/Home.module.css'
 // import img from './style/countries.png'
-import { getCountries, cambiarPag, ordenarPorNombre, ordenarPorPoblacion, buscarPais, reset } from "../actions/index.js";
+import { getCountries, ordenarPorNombre, reset } from "../actions/index.js";
 
 import Cards from './Cards'
-import Info from "./Info";
+
 import Filter from "./Filter";
 import Paginado from "./Paginado";
 
@@ -22,7 +22,6 @@ function Home() {
 
     ////// Estados de redux //////
     const allCountries = useSelector(state => state.countries)
-    const onOffInfo = useSelector(state => state.onOffInfo)
     //////
 
 
@@ -65,9 +64,9 @@ function Home() {
 
 
 
-    ////// Logica de ordenamiento por nombre //////
+    ////// Logica de ordenamiento //////
     const [orden, setOrden] = useState('az')
-    const [ordenPoblacion, setOrdenPoblacion] = useState('menor')
+
 
     function handleOrden(e) {
         // e.preventDefault()
@@ -76,6 +75,7 @@ function Home() {
         setOrden(`ordenado : ${e.target.value}`)
         console.log(orden)
     }
+    //////////////////////////////////
 
 
 
@@ -90,7 +90,7 @@ function Home() {
     function cambiarPag(n) {
         setPagina(n)
     }
-    //////
+    /////////////////////////////////
 
 
 
@@ -111,10 +111,7 @@ function Home() {
         dispatch(reset())
         dispatch(getCountries())
         setPagina(1)
-
     }
-
-
     ////////////////////////////
 
 
@@ -168,13 +165,7 @@ function Home() {
                 />
 
             </div>
-            {
-                onOffInfo && <Info
-                    countries={allCountries}
-                    idOnOff={onOffInfo}
 
-                />
-            }
 
 
 

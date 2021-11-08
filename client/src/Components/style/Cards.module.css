@@ -19,8 +19,15 @@
 
 }
 
+.imgC {
+    animation      : App-logo-spin infinite 50s linear;
+    height         : 85vh;
+    width       :100%;
+    position       : absolute;
+    z-index        : 5;
+}
 
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) {
     .imgC {
         animation: App-logo-spin infinite 50s linear;
         height   : 40vh;
@@ -37,4 +44,4 @@
     to {
         transform: rotate(360deg);
     }
-}
+} */

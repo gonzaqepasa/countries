@@ -108,5 +108,33 @@ export function postActivity(payload) {
         const post = await axios.post('http://localhost:3001/activity', payload)
         console.log(post)
         return post
+
     }
+}
+
+
+
+
+
+
+export function getDetail(id) {
+
+    return async function (dispatch) {
+
+
+        try {
+            const info = await axios.get('http://localhost:3001/countries/' + id)
+            console.log(info.data[0])
+            return dispatch({
+                type: 'GET_DETAIL',
+                payload: info.data
+            })
+        } catch (err) { console.log(err) }
+
+
+    }
+}
+
+export function clearDetail() {
+    return { type: 'CLEAR_DETAIL' }
 }

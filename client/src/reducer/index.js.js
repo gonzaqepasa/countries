@@ -5,6 +5,8 @@ const initialState = {
     countriesFilter: [],
     countriesToSearch: [],
 
+    // Details //
+    detail: [],
 
     // Paginado //
     pagina: 1,
@@ -190,11 +192,18 @@ export default function rootReducer(state = initialState, action) {
                 ...state
             }
 
-
-
         //////////////////////////////
+        case 'GET_DETAIL':
+            return {
+                ...state,
+                detail: action.payload
+            }
 
-
+        case 'CLEAR_DETAIL':
+            return {
+                ...state,
+                detail: []
+            }
 
 
         //////////////////////////////

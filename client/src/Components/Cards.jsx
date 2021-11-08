@@ -1,20 +1,13 @@
 import React from "react";
-import { useSelector } from "react-redux";
-// import { useState } from "react";
 import Card from "./Card";
-import Paginado from "./Paginado";
 import Loading from './Loading';
 import style from './style/Cards.module.css'
-// import { useState } from "react";
-// import Paginado from "./Paginado";
-import img from './style/countriesdeep.png'
+// import img from './style/countriesdeep.png'
+import img from './style/mundogirando.gif'
 
 
 
 export default function Cards(props) {
-
-
-
 
 
 

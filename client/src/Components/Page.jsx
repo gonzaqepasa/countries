@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { changeColor } from "../actions/index.js";
 import style from './style/Page.module.css'
-
+import { Switch } from "react-switch-input";
 
 
 
@@ -18,23 +18,13 @@ export default function Page() {
     ////// Logica de color //////
 
     // const col = useSelector(state => state.color)
-    const [col, setCol] = useState(false)
+    const [col, setCol] = useState(undefined)
 
-    function handlorColor(e) {
-        // e.preventDefault()
-        // dispatch(changeColor())
-        // console.log(col)
-
-
+    function handlerColor(e) {
         setCol(!col)
-
     }
 
     /////////////////////////////
-
-    const [isEnabled, setIsEnabled] = useState(false);
-    const toggleSwitch = () => setIsEnabled(previousState => !previousState);
-
 
 
 
@@ -62,19 +52,15 @@ export default function Page() {
                 <div className={style.botonBox}>
                     <Link className={col ? style.text : style.textBlack} to='/home'>INGRESAR</Link>
 
-                    <button className={style.botonColor} onClick={e => handlorColor(e)}>sdfsdf</button>
-                    <input type='' className={style.botonColor} onClick={e => handlorColor(e)} />
 
-                   {/*  <View style={style.container}>
-                        <Switch
-                            trackColor={{ false: "#767577", true: "#81b0ff" }}
-                            thumbColor={isEnabled ? "#f5dd4b" : "#f4f3f4"}
-                            ios_backgroundColor="#3e3e3e"
-                            onValueChange={toggleSwitch}
-                            value={isEnabled}
-                        />
-                    </View>
- */}
+                    <Switch
+                        onChange={() => handlerColor()}
+                    />
+
+
+
+
+
 
                 </div>
             </div>
