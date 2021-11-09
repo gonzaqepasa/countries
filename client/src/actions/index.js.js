@@ -136,5 +136,35 @@ export function getDetail(id) {
 }
 
 export function clearDetail() {
-    return { type: 'CLEAR_DETAIL' }
+
+    return (dispatch) => dispatch({ type: 'CLEAR_DETAIL' })
+
 }
+
+
+
+
+export function getActivities() {
+
+    return async function (dispatch) {
+
+        try {
+            const get = await axios.get('http://localhost:3001/activities')
+            return dispatch({
+                type: 'GET_ACTIVITIES',
+                payload: get.data
+            })
+        } catch (err) { console.log(err) }
+    }
+}
+
+
+
+
+export function filtrarPorActividad(payload) {
+    return {
+        type: 'FILTRAR_POR_ACTIVIDAD',
+        payload
+    }
+}
+

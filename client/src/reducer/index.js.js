@@ -5,6 +5,9 @@ const initialState = {
     countriesFilter: [],
     countriesToSearch: [],
 
+    // Actividades //
+    activities: [],
+
     // Details //
     detail: [],
 
@@ -204,6 +207,48 @@ export default function rootReducer(state = initialState, action) {
                 ...state,
                 detail: []
             }
+
+
+        //////////////////////////////
+        case 'GET_ACTIVITIES': return {
+            ...state,
+            activities: action.payload
+        }
+
+
+
+
+
+
+        case 'FILTRAR_POR_ACTIVIDAD':
+            const countries = state.countriesFilter
+            const filtredCountries = countries.filter((c) => { return c.activities.find((c) => { return c.name === action.payload; }); });
+
+
+            if (action.payload === 'none') {
+                return { ...state, countries: countries }
+            } else {
+                return {
+                    ...state,
+                    countries: filtredCountries
+                }
+            }
+        //////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         //////////////////////////////

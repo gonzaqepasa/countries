@@ -58,7 +58,7 @@ const getDbInfo = async () => {
     const aux = await Country.findAll({
         include: {
             model: Activities,
-            attributes: ['name'],
+            attributes: ['name', 'difficulty', 'timeLapse', 'seasson'],
             through: {
                 attributes: []
             }
@@ -135,15 +135,29 @@ router.get('/countries/:id', async (req, res) => {
 
 router.post('/activity', async (req, res) => {
 
-    const { difficulty, name, timeLapse, seasson } = req.body
+    const { difficulty, name, timeLapse, seasson, idCountries } = req.body
 
-    if (name, difficulty, timeLapse, seasson) {
+    if (name, difficulty, timeLapse, seasson, idCountries) {
         let toAdd = await Activities.create({
             name,
             difficulty,
             timeLapse,
-            seasson
+            seasson,
+            idCountries
         })
+
+
+        const countries = await Country.findAll({
+            where: {
+                id: idCountries
+            }
+        })
+
+        toAdd.addCountries(countries)
+
+
+
+
         res.status(200).send('Se agrego satisfactoriamentes!')
     } else {
         res.status(404).send('Algo fallo')
@@ -154,11 +168,28 @@ router.post('/activity', async (req, res) => {
 
 
 
-    router.get('/activities', async (req, res) => {
-        const aux2 = await getDbInfo();
-        const aux3 = aux2.map(p => p.activities)
-        res.send(aux3)
-    })
+router.get('/activities', async (req, res) => {
+    // const aux2 = await getDbInfo();
+    // const aux3 = aux2.filter(p => p.activities.length > 0)
+    // const aux3 = aux2.map(p => p)
 
 
-    module.exports = router;
+
+
+    const aux2 = await Activities.findAll()
+    // return aux
+
+
+
+    res.send(aux2)
+})
+
+
+
+
+
+
+
+
+
+module.exports = router;

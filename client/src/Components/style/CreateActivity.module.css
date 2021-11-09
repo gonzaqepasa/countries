@@ -1,8 +1,246 @@
 .todo {
     height          : 100vh;
     width           : 100vw;
-    background-color: wheat;
+    background-color: deepskyblue;
+    background-image: url('./countrieswhite.png');
+    background-size : 200vh;
     display         : flex;
     justify-content : center;
     align-items     : center;
+}
+
+
+
+
+
+
+.formulario {
+    background-color: white;
+    height          : 80vh;
+    width           : 80vw;
+    display         : flex;
+    box-shadow      : 0px 0px 10px white;
+}
+
+
+.box1 {
+    background-color: black;
+    width           : 50vw;
+    display         : flex;
+    flex-direction  : column;
+    justify-content : space-around;
+    align-items     : center;
+    border-right    : solid 1px deepskyblue;
+}
+
+.box2 {
+    background-color: black;
+    width           : 50vw;
+    height          : 100%;
+    display         : flex;
+    flex-direction  : column;
+    justify-content : space-around;
+    align-items     : center;
+}
+
+
+
+
+
+.Box {
+    color                      : white;
+    /* box-shadow              : 0px 0px 10px white; */
+    /* background              : rgba(255, 255, 255, 0.5); */
+
+    /* background-color   : brown; */
+    display            : flex;
+    flex-direction     : column;
+    align-items        : flex-start;
+    /* padding-left    : 1vw; */
+    margin             : 2vh 0 2vh 0;
+    width              : 60%;
+}
+
+.tituloBox {
+    display       : flex;
+    flex-direction: column;
+    align-items   : flex-start;
+    margin        : 0 8vw;
+
+}
+
+.tituloCrear {
+    margin                   : 0 0 0 0;
+    /* border-bottom         : solid 2px deepskyblue; */
+    text-shadow              : 0px 0px 10px deepskyblue;
+    color                    : white;
+}
+
+.parrafoCrear {
+    color     : dimgray;
+    text-align: left;
+    font-size : 0.7em;
+
+
+}
+
+
+.inputText {
+    color                 : deepskyblue;
+    background            : none;
+    padding               : 0.5vh 0.5vw 0.5vh 0.5vw;
+    border                : none;
+    border-bottom         : solid 2px deepskyblue;
+    transition            : 0.2s;
+    /* background-color   : rgba(255, 255, 255, 0.2); */
+
+}
+
+.inputText:hover {
+    background      : rgba(0, 191, 255, 0.2);
+    /* padding      : 0.5vh 0.5vw 0.5vh 0.5vw; */
+    /* border       : none; */
+    /* border-bottom: solid 2px deepskyblue; */
+}
+
+option {
+    background-color: black;
+}
+
+
+.selectBox {
+    color           : deepskyblue;
+    background-color: black;
+    padding         : 0.5vh 0.5vw 0.5vh 0.5vw;
+    border          : none;
+    border-bottom   : solid 2px deepskyblue;
+    transition      : 0.2s;
+
+    cursor: pointer;
+}
+
+.selectBox:hover {
+    background-color: rgba(0, 191, 255, 0.4);
+}
+
+
+
+.paisBox {
+    background-color: black;
+    height          : 10%;
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
+}
+
+.cajaConPaises {
+    height          : 60%;
+    width           : 90%;
+    background-color: black;
+    box-shadow      : 0px 0px 2px white;
+
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+    padding       : 2vh 1vw;
+}
+
+
+.idView {
+    color          : deepskyblue;
+    box-shadow     : 0px 0px 2px white;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    margin         : 0 1vw 0 1vw;
+    height         : 5vh;
+    width          : 100%;
+}
+
+.botonCrear {
+    padding         : 1vh 1vw 1vh 2vw;
+    font-size       : 1..2em;
+    color           : white;
+    background-color: black;
+    border          : none;
+    box-shadow      : 0px 0px 2px white;
+    letter-spacing  : 8px;
+    height          : 4vh;
+    width           : 10vw;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+
+    transition: 0.5s;
+}
+
+.botonCrear:hover {
+    color         : deepskyblue;
+    letter-spacing: 12px;
+    box-shadow    : 0px 0px 2px deepskyblue;
+
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+} */
+
+::-webkit-scrollbar-thumb {
+    border-radius     : 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+
+.inputsBox {
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+    position      : relative;
+    top           : -5vh;
+    width         : 100%;
+}
+
+
+
+.botonVolver {
+    padding         : 1vh 1vw 1vh 2vw;
+    margin-left     : 2vw;
+    font-size       : 0.6em;
+    color           : white;
+    background-color: black;
+    border          : none;
+    box-shadow      : 0px 0px 2px white;
+    letter-spacing  : 8px;
+    height          : 2vh;
+    width           : 8vw;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+
+    transition        : 0.5s;
+    /* position       : absolute; */
+    /* top            : 2vh; */
+    /* left           : 1vw; */
+    border-style      : none;
+    text-decoration   : none;
+
+}
+
+.botonVolver:hover {
+    color         : deepskyblue;
+    letter-spacing: 12px;
+    box-shadow    : 0px 0px 2px deepskyblue;
+}
+
+
+.boxBoton {
+    height          : 4vh;
+    /* background-color: fuchsia; */
+    width           : 100%;
+
 }

@@ -1,0 +1,21 @@
+.boxAll {
+    width           : 100vw;
+    height          : 100vh;
+    background-color: deepskyblue;
+}
+
+
+.loadingBox {
+    /* font-size:5em ; */
+    /* background-color: deepskyblue; */
+    width          : 100vw;
+    height         : 100vh;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+}
+
+.h22 {
+    height: 100%;
+    width : 100%;
+}

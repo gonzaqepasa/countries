@@ -1,8 +1,9 @@
 import React from "react";
 import style from './style/Info.module.css'
 import { useDispatch, useSelector } from "react-redux";
-import { getDetail } from "../actions/index.js";
+import { clearDetail, getDetail } from "../actions/index.js";
 import { useEffect } from "react";
+import Loading from './Loading'
 // import { Link } from "react-router-dom";
 
 export default function Details(props) {
@@ -20,8 +21,9 @@ export default function Details(props) {
 
     ////// use Effect //////
     useEffect(() => {
+        dispatch(clearDetail())
         dispatch(getDetail(props.match.params.id))
-    }, [dispatch])
+    }, [dispatch, props.match.params.id])
     ////////////////////////
 
 
@@ -43,7 +45,8 @@ export default function Details(props) {
     ////// Volver  //////
 
     function volver() {
-        dispatch(getDetail(false))
+        // dispatch(clearDetail())
+
         window.history.back()
     }
     //////////////////////
@@ -53,7 +56,7 @@ export default function Details(props) {
 
 
     return (
-        <div>
+        <div >
 
 
 
@@ -63,6 +66,7 @@ export default function Details(props) {
 
 
                 <div className={style.boxText}>
+                    <button className={style.boton} onClick={() => volver()}>Volver</button>
                     <h1 className={style.namePais}>{detail[0].name}</h1>
                     <div className={style.barrita}></div>
 
@@ -77,8 +81,32 @@ export default function Details(props) {
                     <p className={style.infor2}>Su poblacion es de {detail[0].population} habitantes.</p>
 
 
+
+                    <h2 className={style.infor}> Actividades:</h2>
+                    <div className={style.activitiesBox}>
+
+                        {detail[0].activities.length > 0 ? detail[0].activities.map(a =>
+
+                            <div className={style.boxX1}>
+                                <h2 className={style.titulos} >{a.name}</h2>
+                                <p>Duración: {a.timeLapse}</p>
+                                <p className={style.Pactivity}>Dificultad: {a.difficulty}</p>
+                                <p>Temporada: {a.seasson}</p>
+
+                            </div>
+
+                        )
+
+
+
+
+
+                            : <h2>No hay actividades</h2>}
+
+                    </div>
+
+
                     {/* <Link to='/home'>Voler</Link> */}
-                    <button onClick={() => volver()}>Volver</button>
                 </div>
 
 
@@ -88,7 +116,6 @@ export default function Details(props) {
 
                     <img className={style.flags} src={detail[0].flag} alt="" />
                 </div>
-
 
 
 
@@ -139,7 +166,7 @@ function Cargando() {
 
     return (
         <div className={style.loadingBox}>
-            Loading........ dfgkldfgkjldfsgjk
+            <h2 className={style.h22}>Espere...</h2>
         </div>
 
     )

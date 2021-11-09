@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 // import { Link } from "react-router-dom";
 import style from './style/Home.module.css'
 // import img from './style/countries.png'
-import { getCountries, ordenarPorNombre, reset } from "../actions/index.js";
+import { getActivities, getCountries, ordenarPorNombre, reset } from "../actions/index.js";
 
 import Cards from './Cards'
 
@@ -99,6 +99,7 @@ function Home() {
     ////// UseEffect //////
     useEffect(() => {
         dispatch(getCountries())
+        dispatch(getActivities())
     }, [])
     ////////////////////////
 

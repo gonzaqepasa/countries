@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import SearcherBar from "./SearcherBar"
 import { Link } from "react-router-dom"
 import style from './style/Filter.module.css'
-import { cambiarPag, changeColor, filtrarPorContinente, getCountries, ordenarPorNombre, buscarPais } from "../actions/index.js"
+import { cambiarPag, changeColor, filtrarPorContinente, getCountries, ordenarPorNombre, buscarPais, filtrarPorActividad } from "../actions/index.js"
 import { useDispatch, useSelector } from "react-redux"
 import { BiSearchAlt } from 'react-icons/bi'
 import { GrUpdate, GrAdd } from 'react-icons/gr'
@@ -14,7 +14,7 @@ export default function Filter(props) {
 
     const dispatch = useDispatch()
 
-
+    const activities = useSelector(state => state.activities)
 
 
     const [buscar, setBuscar] = useState('')
@@ -55,6 +55,21 @@ export default function Filter(props) {
 
 
 
+    ////// Logica del Filtrado por Actividad //////
+    function handlerFilterActivity(e) {
+        dispatch(filtrarPorActividad(e.target.value))
+        props.setPagina(1)
+        console.log(e.target.value)
+
+    }
+    ////////////////////////////////////////////////
+
+
+
+
+
+
+
     return (
         <div className={style.filter}>
 
@@ -84,9 +99,12 @@ export default function Filter(props) {
                 </div>
 
             </div>
+
+
+
             <div className={style.boxFiltro}>
                 {/* <h2 className={style.tituloBuscador}>Filtrar por Continente</h2> */}
-                <p className={style.aviso}>Filtrar por continente o por actividades, (si algun pais tiene actividad)*</p>
+                <p className={style.aviso}>Filtrar por continente.</p>
 
                 <select className={style.filterContinent} name="select" onChange={e => handlerFilterContinent(e)}>
                     <option value="todos">Filtrar</option>
@@ -97,11 +115,34 @@ export default function Filter(props) {
                     <option value="Antarctica">Antartica</option>
                     <option value="Oceania">Oceania</option>
                     <option value="Africa">Africa</option>
-                    <hr />
-                    <hr />
-                    <option value="Activities">Actividades</option>
+
+
                 </select>
             </div>
+
+
+
+
+            <div className={style.boxFiltro}>
+                {/* <h2 className={style.tituloBuscador}>Filtrar por Continente</h2> */}
+                <p className={style.aviso}>Filtrar por actividades</p>
+
+                <select className={style.filterContinent} onChange={(e) => handlerFilterActivity(e)}>
+
+                    <option value="none">Filtrar</option>
+
+                    {activities.map(a =>
+                        <option value={a.name}>{a.name}</option>
+                    )}
+
+                </select>
+            </div>
+
+
+
+
+            {/* <div className={style.barrita}></div> */}
+
 
 
 
