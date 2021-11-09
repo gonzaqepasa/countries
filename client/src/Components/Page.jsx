@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { changeColor } from "../actions/index.js";
 import style from './style/Page.module.css'
 import { Switch } from "react-switch-input";
 
@@ -11,13 +9,11 @@ import { Switch } from "react-switch-input";
 export default function Page() {
 
 
-    const dispatch = useDispatch()
 
 
 
-    ////// Logica de color //////
 
-    // const col = useSelector(state => state.color)
+    ////// Logica de color //////  
     const [col, setCol] = useState(undefined)
 
     function handlerColor(e) {

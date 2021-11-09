@@ -1,13 +1,9 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from 'react-redux'
-// import { Link } from "react-router-dom";
 import style from './style/Home.module.css'
-// import img from './style/countries.png'
 import { getActivities, getCountries, ordenarPorNombre, reset } from "../actions/index.js";
-
 import Cards from './Cards'
-
 import Filter from "./Filter";
 import Paginado from "./Paginado";
 

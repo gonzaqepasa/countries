@@ -85,8 +85,7 @@ export default function CreateActivity() {
 
 
 
-
-
+    ////// Logica input idPaises ////// 
     function handleIdPaises(e) {
 
         if (e.target.value !== 'none')
@@ -94,7 +93,7 @@ export default function CreateActivity() {
                 ...inputs, idCountries: [...inputs.idCountries, e.target.value]
             })
     }
-
+    ////////////////////////////////////
 
 
 

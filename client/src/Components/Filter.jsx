@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react"
-import SearcherBar from "./SearcherBar"
 import { Link } from "react-router-dom"
 import style from './style/Filter.module.css'
 import { cambiarPag, changeColor, filtrarPorContinente, getCountries, ordenarPorNombre, buscarPais, filtrarPorActividad } from "../actions/index.js"

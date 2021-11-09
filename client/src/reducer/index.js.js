@@ -15,14 +15,9 @@ const initialState = {
     pagina: 1,
     paisXPage: 10,
 
-    // Informacion //
-    onOffInfo: 0,
 
     // Searcher // 
     searcher: '',
-
-    // ColorFondo // 
-    color: false,
 
     // ordernUpdate // 
     orden: '',
@@ -43,11 +38,14 @@ export default function rootReducer(state = initialState, action) {
             countriesToSearch: action.payload
         }
         //////////////////////////////
+
+
         case 'CHANGE_PAG': return {
             ...state,
             pagina: action.payload
         }
         //////////////////////////////
+
 
         case 'AUMENTAR_PAG': {
             if (state.pagina < action.numeroCondicion.length) {
@@ -61,6 +59,7 @@ export default function rootReducer(state = initialState, action) {
             }
         }
         //////////////////////////////
+
 
         case 'REDUCIR_PAG': {
             if (state.pagina > 1) {
@@ -76,11 +75,13 @@ export default function rootReducer(state = initialState, action) {
         }
         //////////////////////////////
 
+
         case 'ON_OFF_INFO': return {
             ...state,
             onOffInfo: action.id
         }
         //////////////////////////////
+
 
         case 'FILTRAR_CONTINENTE':
             const allCountries = state.countriesFilter;
@@ -101,19 +102,15 @@ export default function rootReducer(state = initialState, action) {
                 countries: continentesFiltrados,
                 countriesToSearch: continentesFiltrados
             }
+        //////////////////////////////      
 
 
-
-
-
-
-
-        //////////////////////////////        
         case 'CHANGE_COLOR': return {
             ...state,
             color: !state.color
         }
         //////////////////////////////
+
 
         case 'ORDENAR_POR_NOMBRE':
 
@@ -166,13 +163,8 @@ export default function rootReducer(state = initialState, action) {
                 countriesToSearch: ordenamiento,
                 asd: !state.asd
             }
-
-
-
-
-
-
         //////////////////////////////
+
 
         case 'BUSCADOR':
             const allCountriesasd = state.countriesToSearch
@@ -182,42 +174,44 @@ export default function rootReducer(state = initialState, action) {
                 ...state,
                 countries: asd
             }
-
         //////////////////////////////
+
+
         case 'RESET': return {
             ...state,
             countries: []
         }
-
         //////////////////////////////
+
+
         case 'POST_ACTIVITY':
             return {
                 ...state
             }
-
         //////////////////////////////
+
+
         case 'GET_DETAIL':
             return {
                 ...state,
                 detail: action.payload
             }
+        //////////////////////////////
+
 
         case 'CLEAR_DETAIL':
             return {
                 ...state,
                 detail: []
             }
-
-
         //////////////////////////////
+
+
         case 'GET_ACTIVITIES': return {
             ...state,
             activities: action.payload
         }
-
-
-
-
+        //////////////////////////////
 
 
         case 'FILTRAR_POR_ACTIVIDAD':
@@ -234,17 +228,6 @@ export default function rootReducer(state = initialState, action) {
                 }
             }
         //////////////////////////////
-
-
-
-
-
-
-
-
-
-
-
 
 
 

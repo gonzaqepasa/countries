@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import style from './style/Card.module.css'
-import { clearDetail, getDetail } from "../actions/index.js";
+import { getDetail } from "../actions/index.js";
 import { Link } from 'react-router-dom'
 
 
@@ -12,18 +12,16 @@ export default function Card(props) {
 
 
 
-
+    ////// Logica del boton getDetail ////// 
     function handleinfo(id) {
         dispatch(getDetail(id))
     }
-
-
-
-
+    ////////////////////////////////////////
 
 
 
     const asd = `/home/${props.id}`
+
     return (
         <div className={style.box}>
             <Link to={asd} onClick={() => handleinfo(props.id)}>

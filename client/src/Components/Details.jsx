@@ -3,8 +3,7 @@ import style from './style/Info.module.css'
 import { useDispatch, useSelector } from "react-redux";
 import { clearDetail, getDetail } from "../actions/index.js";
 import { useEffect } from "react";
-import Loading from './Loading'
-// import { Link } from "react-router-dom";
+
 
 export default function Details(props) {
 
@@ -43,7 +42,6 @@ export default function Details(props) {
 
 
     ////// Volver  //////
-
     function volver() {
         // dispatch(clearDetail())
 
@@ -77,7 +75,7 @@ export default function Details(props) {
                     <h3 className={style.infor}>{detail[0].continent}</h3>
 
                     <p className={style.titulos}>Informacion:</p>
-                    <p className={style.infor2}>Su territorio tiene un area de {detail[0].area / 1000} Kilometros cuadrados.</p>
+                    <p className={style.infor2}>Su territorio tiene un area de {detail[0].area} Kilometros cuadrados.</p>
                     <p className={style.infor2}>Su poblacion es de {detail[0].population} habitantes.</p>
 
 

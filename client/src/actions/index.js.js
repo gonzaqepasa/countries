@@ -1,7 +1,4 @@
 import axios from 'axios';
-import { useSelector } from 'react-redux';
-
-
 
 
 
@@ -14,7 +11,7 @@ export function getCountries() {
         })
     }
 }
-
+/////////////////////////////
 
 export function cambiarPag(payload) {
     // Cambia la pagina cuando selecciono un numero en el Paginado 
@@ -23,6 +20,7 @@ export function cambiarPag(payload) {
         payload: payload
     }
 }
+/////////////////////////////
 
 export function aumentarPag(numeroCondicion) {
     // Aumenta el numero del paginado en 1 
@@ -31,6 +29,7 @@ export function aumentarPag(numeroCondicion) {
         numeroCondicion: numeroCondicion
     }
 }
+/////////////////////////////
 
 export function reducirPag(numeroCondicion) {
     // Disminuye el numero del Paginado en 1
@@ -40,8 +39,7 @@ export function reducirPag(numeroCondicion) {
 
     }
 }
-
-
+/////////////////////////////
 
 export function onOffInfoChange(id) {
     // Setea el on/off para ver la info de pais // esto debo cambiar
@@ -51,8 +49,7 @@ export function onOffInfoChange(id) {
 
     }
 }
-
-
+/////////////////////////////
 
 export function filtrarPorContinente(continente) {
     return {
@@ -60,16 +57,14 @@ export function filtrarPorContinente(continente) {
         payload: continente
     }
 }
-
+/////////////////////////////
 
 export function changeColor() {
     return {
         type: 'CHANGE_COLOR',
     }
 }
-
-
-
+/////////////////////////////
 
 export function ordenarPorNombre(payload) {
     return {
@@ -77,6 +72,7 @@ export function ordenarPorNombre(payload) {
         payload: payload
     }
 }
+/////////////////////////////
 
 export function ordenarPorPoblacion(payload) {
     return {
@@ -84,14 +80,14 @@ export function ordenarPorPoblacion(payload) {
         payload: payload
     }
 }
-
-
+/////////////////////////////
 
 export function reset() {
     return {
         type: 'RESET',
     }
 }
+/////////////////////////////
 
 export function buscarPais(payload) {
     return {
@@ -99,8 +95,7 @@ export function buscarPais(payload) {
         payload
     }
 }
-
-
+/////////////////////////////
 
 export function postActivity(payload) {
 
@@ -111,11 +106,7 @@ export function postActivity(payload) {
 
     }
 }
-
-
-
-
-
+/////////////////////////////
 
 export function getDetail(id) {
 
@@ -134,15 +125,14 @@ export function getDetail(id) {
 
     }
 }
+/////////////////////////////
 
 export function clearDetail() {
 
     return (dispatch) => dispatch({ type: 'CLEAR_DETAIL' })
 
 }
-
-
-
+/////////////////////////////
 
 export function getActivities() {
 
@@ -157,9 +147,7 @@ export function getActivities() {
         } catch (err) { console.log(err) }
     }
 }
-
-
-
+/////////////////////////////
 
 export function filtrarPorActividad(payload) {
     return {
@@ -167,4 +155,5 @@ export function filtrarPorActividad(payload) {
         payload
     }
 }
+/////////////////////////////
 

@@ -6,35 +6,21 @@ import { useDispatch, useSelector } from "react-redux";
 
 export default function Paginado({ allCountries, paisesXPagina, pagina, cambiarPag, aumentarPag, reducirPag }) {
 
+    ////// Logica de cantidad de paginas //////
     const paginaNum = []
 
     const aux = Math.ceil(allCountries / paisesXPagina)
     for (let i = 1; i <= aux; i++) {
         paginaNum.push(i)
     }
+    /////////////////////////////////////////////
 
 
-
-
-    // const pagina = useSelector(state => state.pagina)
-
-
-
-
-
-
-
-
-
-
-
-    const dispatch = useDispatch()
-
-
-
-
+    // Nombres para los botones //
     const izq = "<"
     const der = ">"
+
+
     return (
         <nav className={style.todoElNav}>
 
