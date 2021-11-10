@@ -29,13 +29,12 @@ export default function Filter(props) {
 
     function handleSubmit(e) {
         e.preventDefault()
+        if(buscar.length === 0) return alert('Debes ingresar algo para buscar.');
         dispatch(buscarPais(buscar))
-        console.log('a buscar:', buscar)
+        console.log('a buscar:', buscar)    
         props.setPagina(1)
         setBuscar('')
     }
-
-
     /////////////////////////////////
 
 
@@ -99,7 +98,16 @@ export default function Filter(props) {
 
             </div>
 
-
+            <div className={style.boxBuscador}>
+                {/* <h2 className={style.tituloBuscador}>Buscar Pais</h2> */}
+                <p className={style.aviso}>Busca paises por nombre <br /> Sobre los filtrados*</p>
+                <div className={style.inputConBoton}>
+                    <form action="" onSubmit={e => handleSubmit(e)}>
+                        <input className={style.inputSearch} type="text" placeholder='Buscar' onChange={e => handleChange(e)} value={buscar} />
+                        <button className={style.boton} type="submit" ><BiSearchAlt /></button>
+                    </form>
+                </div>
+            </div>
 
             <div className={style.boxFiltro}>
                 {/* <h2 className={style.tituloBuscador}>Filtrar por Continente</h2> */}
@@ -173,16 +181,7 @@ export default function Filter(props) {
 
 
 
-            <div className={style.boxBuscador}>
-                {/* <h2 className={style.tituloBuscador}>Buscar Pais</h2> */}
-                <p className={style.aviso}>Busca paises por nombre <br /> Sobre los filtrados*</p>
-                <div className={style.inputConBoton}>
-                    <form action="" onSubmit={e => handleSubmit(e)}>
-                        <input className={style.inputSearch} type="text" placeholder='Buscar' onChange={e => handleChange(e)} value={buscar} />
-                        <button className={style.boton} type="submit" ><BiSearchAlt /></button>
-                    </form>
-                </div>
-            </div>
+
 
 
 

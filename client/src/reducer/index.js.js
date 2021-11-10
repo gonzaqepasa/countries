@@ -167,12 +167,12 @@ export default function rootReducer(state = initialState, action) {
 
 
         case 'BUSCADOR':
-            const allCountriesasd = state.countriesToSearch
-            const asd = allCountriesasd.filter(p => p.name.toLowerCase().includes(action.payload.toLowerCase()))
+
 
             return {
                 ...state,
-                countries: asd
+                countries: action.payload,
+                countriesFilter: action.payload
             }
         //////////////////////////////
 

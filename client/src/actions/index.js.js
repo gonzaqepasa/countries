@@ -89,10 +89,14 @@ export function reset() {
 }
 /////////////////////////////
 
-export function buscarPais(payload) {
-    return {
-        type: 'BUSCADOR',
-        payload
+export function buscarPais(pais) {
+
+    return async function (dispatch) {
+        var bdData = await axios.get(`http://localhost:3001/countries?name=${pais}`);
+        return dispatch({
+            type: 'BUSCADOR',
+            payload: bdData.data
+        })
     }
 }
 /////////////////////////////

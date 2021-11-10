@@ -11,7 +11,10 @@ const router = Router();
 
 // Configurar los routers
 // Ejemplo: router.use('/auth', authRouter);
+
+
 const getApiInfo = async () => {
+// Llamo a la API y retorno la información.
     const apiUrl = await axios.get('https://restcountries.com/v3/all');
     const apiData = await apiUrl.data.map((pais) => {
         return {
@@ -28,7 +31,7 @@ const getApiInfo = async () => {
     });
 
     const guardar = () => {
-
+// Guardo la información retornada y la guardo en la base de datos.
         apiData.map(el => {
             Country.findOrCreate({
                 where: {
@@ -52,10 +55,14 @@ const getApiInfo = async () => {
     return apiData
 };
 
-const getDbInfo = async () => {
-    // llamo a todo el modelo Country incluyendo el nombre y id de modelo Activities 
-    await getApiInfo()
-    const aux = await Country.findAll({
+
+
+
+
+const getDbInfo = () => {
+    // llamo a todo el modelo Country incluyendo el nombre y id de modelo Activities y retorno.
+    getApiInfo()// Ejecuto la función.
+    const aux = Country.findAll({
         include: {
             model: Activities,
             attributes: ['name', 'difficulty', 'timeLapse', 'seasson'],
@@ -64,33 +71,17 @@ const getDbInfo = async () => {
             }
         }
     })
-    // const aux = await Country.findAll()
 
 
 
     return aux
 
+
 };
 
 
-/* const getAllCountry = async () => {
-    // const apiInfo = await getApiInfo();
-    const dbInfo = await getDbInfo();
-    // const infoCompleta = apiInfo.concat(dbInfo);
-    return infoCompleta;
-} */
 
-
-router.get('/holaaa', async (req, res) => {
-
-    // const aux = await getDbInfo()
-    // res.send(aux)
-
-
-    res.send('Hola')
-
-
-})
+//////////// RUTAS ////////////
 
 
 
@@ -168,20 +159,14 @@ router.post('/activity', async (req, res) => {
 
 
 
-router.get('/activities', async (req, res) => {
-    // const aux2 = await getDbInfo();
-    // const aux3 = aux2.filter(p => p.activities.length > 0)
-    // const aux3 = aux2.map(p => p)
+router.get('/activities', async (req, res) => { 
+
+    const actividadesCreadas = await Activities.findAll()
+   
 
 
 
-
-    const aux2 = await Activities.findAll()
-    // return aux
-
-
-
-    res.send(aux2)
+    res.send(actividadesCreadas)
 })
 
 
