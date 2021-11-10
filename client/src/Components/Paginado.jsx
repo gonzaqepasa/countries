@@ -1,7 +1,6 @@
 import React from "react";
 import style from './style/Paginado.module.css'
-import { cambiarPag, aumentarPag, reducirPag } from "../actions/index.js";
-import { useDispatch, useSelector } from "react-redux";
+
 
 
 export default function Paginado({ allCountries, paisesXPagina, pagina, cambiarPag, aumentarPag, reducirPag }) {

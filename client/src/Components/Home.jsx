@@ -25,7 +25,7 @@ function Home() {
     ////// Estados Paginado 0//////
 
     const [pagina, setPagina] = useState(1)
-    const [paisesXPagina, setPaisXPagina] = useState(10)
+    const [paisesXPagina,] = useState(10)
 
 
     function cambiarPag(e) {
@@ -78,10 +78,6 @@ function Home() {
 
 
 
-
-
-
-
     ////// Logica de buscador //////
     function cambiarPag(n) {
         setPagina(n)
@@ -96,7 +92,7 @@ function Home() {
     useEffect(() => {
         dispatch(getCountries())
         dispatch(getActivities())
-    }, [])
+    }, [dispatch])
     ////////////////////////
 
 
@@ -114,10 +110,7 @@ function Home() {
 
 
     ////// Logica de Crear actividad //////
-    const [cAvtivities, setCActivities] = useState(false)
-    function handleActivities(e) {
-        setCActivities(!cAvtivities)
-    }
+
 
 
     ////////////////////////////

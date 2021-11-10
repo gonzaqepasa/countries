@@ -20,13 +20,14 @@ export default function Cards(props) {
 
 
             <img src={img} alt="asd" className={style.imgC} />
-           
+
 
 
             {
                 props.paisesActualesEnPagina.length ?
                     props.paisesActualesEnPagina.map(c => (
                         <Card
+                            key={c.id}
                             name={c.name}
                             flag={c.flag}
                             continent={c.continent}

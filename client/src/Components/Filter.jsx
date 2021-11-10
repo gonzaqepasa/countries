@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import { Link } from "react-router-dom"
 import style from './style/Filter.module.css'
-import { cambiarPag, changeColor, filtrarPorContinente, getCountries, ordenarPorNombre, buscarPais, filtrarPorActividad } from "../actions/index.js"
+import { filtrarPorContinente, buscarPais, filtrarPorActividad } from "../actions/index.js"
 import { useDispatch, useSelector } from "react-redux"
 import { BiSearchAlt } from 'react-icons/bi'
 import { GrUpdate, GrAdd } from 'react-icons/gr'
@@ -29,9 +29,9 @@ export default function Filter(props) {
 
     function handleSubmit(e) {
         e.preventDefault()
-        if(buscar.length === 0) return alert('Debes ingresar algo para buscar.');
+        if (buscar.length === 0) return alert('Debes ingresar algo para buscar.');
         dispatch(buscarPais(buscar))
-        console.log('a buscar:', buscar)    
+        console.log('a buscar:', buscar)
         props.setPagina(1)
         setBuscar('')
     }
@@ -139,7 +139,7 @@ export default function Filter(props) {
                     <option value="none">Filtrar</option>
 
                     {activities.map(a =>
-                        <option value={a.name}>{a.name}</option>
+                        <option key={a.id} value={a.name}>{a.name}</option>
                     )}
 
                 </select>
@@ -161,8 +161,8 @@ export default function Filter(props) {
                     <option value="az">Ordenar</option>
                     <option value="az">A-Z</option>
                     <option value="za">Z-A</option>
-                    <hr />
-                    <hr />
+                    {/* <hr /> */}
+                    {/* <hr /> */}
                     <option value="menor">Menor-Mayor</option>
                     <option value="mayor">Mayor-Menor</option>
                 </select>

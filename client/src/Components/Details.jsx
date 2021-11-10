@@ -29,13 +29,13 @@ export default function Details(props) {
 
 
     ////// Botones para ver parametros //////
-    function mostrar() {
+    /* function mostrar() {
         console.log('params?', props)
     }
 
     function mostrarInfo() {
         console.log('infoasd?', detail)
-    }
+    } */
     ////////////////////////////////////////
 
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import style from './style/CreateActivity.module.css'
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { postActivity } from "../actions/index.js";
 
