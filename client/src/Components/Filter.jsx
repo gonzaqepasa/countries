@@ -148,7 +148,7 @@ export default function Filter(props) {
 
 
 
-            {/* <div className={style.barrita}></div> */}
+
 
 
 
