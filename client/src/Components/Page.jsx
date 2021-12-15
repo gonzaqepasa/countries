@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import style from './style/Page.module.css'
+import style from './style/Page.module.scss'
 import { Switch } from "react-switch-input";
 
 
@@ -42,7 +42,6 @@ export default function Page() {
                 <div className={style.parrafo}>
                     <p >Bienvenido a mi pagina de paises realizada en Henry, espero que sea de tu agrado y gracias por la visita.</p>
                     <p>☼En esta pagina podras buscar paises de todo el mundo, filtrarlos por continente, ordenarlos alfabeticamente y por población, además podras ver la informacion de cada uno de ellos.</p>
-                    <p>☼Podras crear actividades en cada pais.</p>
 
                 </div>
                 <div className={style.botonBox}>
