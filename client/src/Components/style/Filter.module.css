@@ -1,336 +1,311 @@
 .filter {
-    /* font-family     : Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
-    /* font-size       : 2em; */
-    color                       : white;
-    margin                      : 0 0 0 0;
-    /* background-color         : rgba(255, 255, 1, 1); */
-    background-color            : black;
-    /* box-shadow               : 0px 0px 10px   black; */
-    width                       : 15vw;
-    height                      : 100vh;
-    /* position                 : absolute; */
-    /* right                    : 1vw; */
-    /* top                      : 10vh; */
-    display                     : flex;
-    flex-direction              : column;
-    align-items                 : flex-start;
-    /* justify-content          : center; */
-    /* border-radius            : 10px; */
-    /* padding                  : 0; */
-    /* text-transform           : capitalize; */
-    transition                  : 0.8s;
-    /* z-index                  : 150; */
-    /* background-image         : url(countriesdeep.png); */
-
-
-
+  /* font-family     : Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+  /* font-size       : 2em; */
+  color: white;
+  margin: 0 0 0 0;
+  /* background-color         : rgba(255, 255, 1, 1); */
+  background-color: black;
+  /* box-shadow               : 0px 0px 10px   black; */
+  width: 70vw;
+  height: 100vh;
+  position: fixed;
+  /* right                    : 1vw; */
+  /* top                      : 10vh; */
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content          : center; */
+  /* border-radius            : 10px; */
+  /* padding                  : 0; */
+  /* text-transform           : capitalize; */
+  transition: 0.8s;
+  z-index: 1500;
+  /* background-image         : url(countriesdeep.png); */
 }
-
-
 
 .navbarBox {
-    width: 100%;
+  width: 100%;
 }
 
-
-
-
-
-
 .boxBuscador {
-    color: white;
-
-    display       : flex;
-    flex-wrap     : nowrap;
-    flex-direction: column;
-    align-items   : flex-start;
-    margin-left   : 1vw;
-    margin-bottom : 7vh;
+  color: white;
+  width: 80%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  /* align-items: center; */
+  /* margin-left: 1vw; */
+  margin-bottom: 7vh;
 }
 
 .barrita {
-    height             : 2px;
-    width              : 80%;
-    /* background-color: black; */
-    /* background      : rgb(67, 180, 58);*/
-    margin             : 10px 0px 10px 1vw;
-    /* padding         : 1px 1px; */
-    background-color   : deepskyblue;
+  height: 2px;
+  width: 80%;
+  /* background-color: black; */
+  /* background      : rgb(67, 180, 58);*/
+  margin: 10px 0px 10px 1vw;
+  /* padding         : 1px 1px; */
+  background-color: deepskyblue;
 }
 
 .tituloBuscador {
-
-    margin        : 2vh 0 0vh 0;
-    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
-    font-size     : 0.8em;
+  margin: 2vh 0 0vh 0;
+  /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+  font-size: 0.8em;
 }
 
 .boxFiltro {
-    display       : flex;
-    flex-wrap     : nowrap;
-    flex-direction: column;
-    align-items   : flex-start;
-    margin-left   : 1vw;
-    margin-bottom : 3vh;
-    color         : white;
-
-
-
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: flex-start;
+  /* margin-left: 1vw; */
+  width: 80%;
+  margin-bottom: 3vh;
+  color: white;
 }
 
 .inputSearch {
-    color              : deepskyblue;
-    width              : 8vw;
-    background         : transparent;
-    border             : none;
-    /* border-bottom   : 2px solid deepskyblue; */
-    /* box-shadow      :0px 10px 100px deeppink ; */
-    height             : 100%;
+  color: deepskyblue;
+  width: 8vw;
+  background: transparent;
+  border: none;
+  /* border-bottom   : 2px solid deepskyblue; */
+  /* box-shadow      :0px 10px 100px deeppink ; */
+  height: 100%;
 }
-
-
 
 .boxOrdenador {
-    margin-left   : 1vw;
-    margin-bottom : 3vh;
-    display       : flex;
-    flex-direction: column;
-    align-items   : flex-start;
+  /* margin-left: 1vw; */
+  width: 80%;
+  margin-bottom: 3vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-
 .inputConBoton {
-    border-bottom: 2px solid deepskyblue;
+  border-bottom: 2px solid deepskyblue;
 
-    display               : flex;
-    justify-content       : flex-start;
-    align-items           : center;
-    width                 : 10.5vw;
-    margin                : 0 0 0 0;
-    /* background-color   : rgba(255, 255, 255, 0.2); */
-    border-radius         : 1px;
-    /* padding            : 0 1px; */
-    transition            : 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  width: 100%;
+  margin: 0 0 0 0;
+  /* background-color   : rgba(255, 255, 255, 0.2); */
+  border-radius: 1px;
+  /* padding            : 0 1px; */
+  transition: 0.2s;
+}
+
+.inputConBoton input {
+  width: 70%;
+  height: 5vh;
 }
 
 .inputConBoton:hover {
-    background-color: rgba(0, 191, 255, 0.4);
+  background-color: rgba(0, 191, 255, 0.4);
 }
 
-
-
-
 .boton {
-    color           : rgba(255, 255, 255, 0.5);
-    background      : transparent;
-    cursor          : pointer;
-    border          : none;
-    /* border-bottom: 2px solid deepskyblue; */
-
-    height    : 100%;
-    transition: 0.2s;
+  color: rgba(255, 255, 255, 0.5);
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  justify-content: center;
+  /* border-bottom: 2px solid deepskyblue; */
+  /* height: 100%; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* width: 20%; */
+  font-size: 1.5rem;
+  transition: 0.2s;
+  background-color: red;
 }
 
 .boton:hover {
-    /* background: rgba(0, 191, 255, 0.2); */
-    /* border-radius: 1px; */
-    color: deepskyblue;
+  /* background: rgba(0, 191, 255, 0.2); */
+  /* border-radius: 1px; */
+  color: deepskyblue;
 }
 
 .ordenador {
-    color              : deepskyblue;
-    border             : solid 1px deepskyblue;
-    background         : transparent;
-    border             : none;
-    border-bottom      : 2px solid deepskyblue;
-    /* background-color: rgba(255, 255, 255, 0.2); */
-    /* background-color: black; */
-    border-radius      : 1px;
-    padding            : 0 1px;
-    transition         : 0.2s;
-    cursor             : pointer;
-
-
+  color: deepskyblue;
+  border: solid 1px deepskyblue;
+  width: 100%;
+  height: 5vh;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid deepskyblue;
+  /* background-color: rgba(255, 255, 255, 0.2); */
+  /* background-color: black; */
+  border-radius: 1px;
+  padding: 0 1px;
+  transition: 0.2s;
+  cursor: pointer;
 }
 
 .ordenador:hover {
-    background-color: rgba(0, 191, 255, 0.4);
-
+  background-color: rgba(0, 191, 255, 0.4);
 }
 
 .ordenador option {
-    background-color: black;
+  background-color: black;
 }
 
-
 .filterContinent {
-    /* font-style      : none; */
-    color                 : deepskyblue;
-    background            : transparent;
-    border                : none;
-    /* border-bottom      : 2px solid linear-gradient(90deg, rgba(67, 180, 58, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(72, 69, 252, 1) 100%); */
-    border-bottom         : 2px solid deepskyblue;
-    /* background-color   : rgba(255, 255, 255, 0.2); */
-    /* border-radius      : px; */
-    padding               : 0 1px;
-    transition            : 0.2s;
-    cursor                : pointer;
-
+  /* font-style      : none; */
+  color: deepskyblue;
+  background: transparent;
+  border: none;
+  /* border-bottom      : 2px solid linear-gradient(90deg, rgba(67, 180, 58, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(72, 69, 252, 1) 100%); */
+  border-bottom: 2px solid deepskyblue;
+  /* background-color   : rgba(255, 255, 255, 0.2); */
+  /* border-radius      : px; */
+  padding: 0 1px;
+  transition: 0.2s;
+  cursor: pointer;
+  width: 100%;
 }
 
 .filterContinent:hover {
-    background-color: rgba(0, 191, 255, 0.4);
-
+  background-color: rgba(0, 191, 255, 0.4);
 }
 
-
-
 .botonesBox {
-    display       : flex;
-    flex-direction: column;
-    width         : 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .resetBox1 {
-    width  : 100%;
-    display: flex;
-    height : 50%;
+  width: 100%;
+  display: flex;
+  height: 50%;
 }
 
 .back {
-    font-size                  : 1.5em;
-    color                      : black;
-    /* height                  : 50%; */
-    display                    : flex;
-    /* justify-content         : flex-end; */
-    align-items                : center;
-    justify-content            : center;
-    height                     : 4vh;
-    width                      : 2.8vw;
-    border                     : none;
-    background                 : rgba(255, 255, 255, 0.5);
-    border-radius              : 50px;
-    /* padding                 : 2px; */
-    margin                     : 10px 5px;
-    transition                 : 0.2s;
-    position                   : absolute;
+  font-size: 1.5em;
+  color: black;
+  /* height                  : 50%; */
+  display: flex;
+  /* justify-content         : flex-end; */
+  align-items: center;
+  justify-content: center;
+  height: 4vh;
+  width: 2.8vw;
+  border: none;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50px;
+  /* padding                 : 2px; */
+  margin: 10px 5px;
+  transition: 0.2s;
+  position: absolute;
 }
 
 .back:hover {
-    background: deepskyblue;
-    cursor    : pointer;
+  background: deepskyblue;
+  cursor: pointer;
 }
 
 .back:active {
-    background: rgba(0, 191, 255, 0.8);
-
+  background: rgba(0, 191, 255, 0.8);
 }
 
 .resetBox {
-    /* background-color: red; */
-    width          : 100%;
-    display        : flex;
-    justify-content: flex-end;
-    align-items    : center;
-    height         : 5vh;
+  /* background-color: red; */
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 5vh;
 }
 
 .reset {
-    display                 : flex;
-    /* justify-content      : flex-end; */
-    align-items             : center;
-    justify-content         : center;
-    /* height               : 3.1vh; */
-    border                  : none;
-    background              : rgba(255, 255, 255, 0.5);
-    border-radius           : 50px;
-    padding                 : 3px;
-    margin                  : 20px 5px;
-    transition              : 0.2s;
+  display: flex;
+  /* justify-content      : flex-end; */
+  align-items: center;
+  justify-content: center;
+  /* height               : 3.1vh; */
+  border: none;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50px;
+  padding: 3px;
+  margin: 20px 5px;
+  transition: 0.2s;
 }
 
 .createBox {
-    /* background-color: blue; */
-    width : 100%;
-    height: 50%;
+  /* background-color: blue; */
+  width: 100%;
+  height: 50%;
 
-    display        : flex;
-    justify-content: flex-end;
-    align-items    : center;
-    height         : 5vh;
-    /* position    : absolute; */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 5vh;
+  /* position    : absolute; */
 }
 
 .create {
-
-    font-size               : 1em;
-    display                 : flex;
-    /* justify-content      : flex-end; */
-    align-items             : center;
-    justify-content         : center;
-    /* height               : 3.1vh; */
-    border                  : none;
-    background              : rgba(255, 255, 255, 0.5);
-    border-radius           : 50px;
-    padding                 : 3px;
-    margin                  : 10px 5px;
-    transition              : 0.2s;
+  font-size: 1em;
+  display: flex;
+  /* justify-content      : flex-end; */
+  align-items: center;
+  justify-content: center;
+  /* height               : 3.1vh; */
+  border: none;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50px;
+  padding: 3px;
+  margin: 10px 5px;
+  transition: 0.2s;
 }
 
 .create:hover {
-    background: deepskyblue;
-    cursor    : pointer;
+  background: deepskyblue;
+  cursor: pointer;
 }
 
 .create:active {
-    background: rgba(0, 191, 255, 0.8);
-
+  background: rgba(0, 191, 255, 0.8);
 }
 
-
-
 .reset:hover {
-    background: deepskyblue;
-    cursor    : pointer;
+  background: deepskyblue;
+  cursor: pointer;
 }
 
 .reset:active {
-    background: rgba(0, 191, 255, 0.8);
-
+  background: rgba(0, 191, 255, 0.8);
 }
-
-
-
 
 .filterContinent option {
-    background-color: black;
+  background-color: black;
 }
 
-
-
 .aviso {
-    color     : dimgrey;
-    margin    : 1vh 1vw 1vh 0;
-    font-size : 0.7em;
-    text-align: left;
+  color: dimgrey;
+  margin: 1vh 1vw 1vh 0;
+  font-size: 0.7em;
+  text-align: left;
 }
 
 .avisoReset {
-    color       : dimgrey;
-    /* margin   : 0 0 1.5vh 0; */
-    font-size   : 0.7em;
-    transition  : 0.1s;
+  color: dimgrey;
+  /* margin   : 0 0 1.5vh 0; */
+  font-size: 0.7em;
+  transition: 0.1s;
 }
-
-
-
 
 select:focus {
-    outline: none;
+  outline: none;
 }
 
-
-
 input:focus {
-    outline: none;
+  outline: none;
 }
