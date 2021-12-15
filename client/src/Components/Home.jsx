@@ -11,6 +11,10 @@ import {
 import Cards from "./Cards";
 import Filter from "./Filter";
 import Paginado from "./Paginado";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { IoMdClose } from "react-icons/io";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowCircleRight } from "@fortawesome/free-solid-svg-icons";
 
 function Home() {
   const dispatch = useDispatch();
@@ -43,7 +47,7 @@ function Home() {
     }
   }
 
-  console.log(pagina);
+  // console.log(pagina);
 
   ////// Logica de Paginado //////
   const indiceUltimoPais = pagina * paisesXPagina;
@@ -63,7 +67,7 @@ function Home() {
     dispatch(ordenarPorNombre(e.target.value));
     // setPagina(1)
     setOrden(`ordenado : ${e.target.value}`);
-    console.log(orden);
+    // console.log(orden);
   }
   //////////////////////////////////
 
@@ -93,23 +97,34 @@ function Home() {
 
   ////////////////////////////
 
+  ////// Logica boton acultar filtro //////
+
+  function handleActiveFilter(e) {
+    e.preventDefault();
+    setFilterActive(!filterActive);
+    console.log(filterActive);
+  }
+
+  ////////////////////////////
+
   return (
     <div className={style.home}>
-<button className={style.botonFilter} onClick={e=> setFilterActive(!filterActive)}>menu</button>
+      <button
+        className={filterActive?style.botonFilter:`${style.botonFilter} ${style.disabledButtom}`}
+        onClick={(e) => handleActiveFilter(e)}
+      >
+        {/* {filterActive ? <FontAwesomeIcon icon={faArrowCircleRight} />: <GiHamburgerMenu />} */}
+        <FontAwesomeIcon icon={faArrowCircleRight} />
+      </button>
 
+      <Filter
+        filterActive={filterActive}
+        reset={handleReset}
+        setPagina={setPagina}
+        handleOrden={handleOrden}
+      />
 
-
-      {filterActive ? (
-        <Filter
-          reset={handleReset}
-          setPagina={setPagina}
-          handleOrden={handleOrden}
-        />
-      ) : (
-        false
-      )}
-
-     {/*  <div className={style.cardsPag}>
+      {/*  <div className={style.cardsPag}>
         <Cards
           countries={allCountries}
           paisesActualesEnPagina={paisesActualesEnPagina}

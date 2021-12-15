@@ -16,10 +16,23 @@
 
 .botonFilter{
     position: fixed;
-    top: 0;
-    right: 0;
+    top: 2vh;
+    right: 1vw;
+    font-size: 2.5rem;
+    background-color: transparent;
+    border: none;
+    transition: 0.5s;
+    display:flex;
+justify-content: center ;
+align-items: center;
 }
+.botonFilter:hover{
+    color: white;
+}
+.disabledButtom{
+    transform: rotate(-180deg)
 
+}
 
 
 .cardsPag {

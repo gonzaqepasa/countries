@@ -19,9 +19,15 @@
   /* border-radius            : 10px; */
   /* padding                  : 0; */
   /* text-transform           : capitalize; */
-  transition: 0.8s;
+  transition: 0.5s;
   z-index: 1500;
   /* background-image         : url(countriesdeep.png); */
+}
+
+
+.disabled{
+  position: absolute;
+  left:-75vw;
 }
 
 .navbarBox {

@@ -69,7 +69,7 @@ export default function Filter(props) {
 
 
     return (
-        <div className={style.filter}>
+       <div className={props.filterActive?style.filter:`${style.filter} ${style.disabled}`}>
 
 
             <div className={style.botonesBox}>
@@ -166,11 +166,6 @@ export default function Filter(props) {
                     <option value="menor">Menor-Mayor</option>
                     <option value="mayor">Mayor-Menor</option>
                 </select>
-
-
-                {/*  <select className={style.ordenador} name="ordenamiento" onChange={(e) => props.handleOrdenPopu(e)}>
-
-                </select> */}
 
 
 
