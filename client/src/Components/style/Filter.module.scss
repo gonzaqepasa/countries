@@ -4,7 +4,7 @@
   color: white;
   margin: 0 0 0 0;
   /* background-color         : rgba(255, 255, 1, 1); */
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.95);
   /* box-shadow               : 0px 0px 10px   black; */
   width: 70vw;
   height: 100vh;
@@ -22,27 +22,142 @@
   transition: 0.5s;
   z-index: 1500;
   /* background-image         : url(countriesdeep.png); */
+
+  .botonesBox {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 12vh;
+
+    .resetBox1 {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 50%;
+
+      .back {
+        font-size: 2em;
+        color: black;
+        /* height                  : 50%; */
+        display: flex;
+        /* justify-content         : flex-end; */
+        align-items: center;
+        justify-content: center;
+        // height: 4vh;
+        // width: 10%;
+        border: none;
+        background: rgba(255, 255, 255, 0.5);
+        border-radius: 50px;
+        margin-left: 0.5rem;
+        // margin: 10px 5px;
+        transition: 0.2s;
+        // position: absolute;
+      }
+
+      .back:hover {
+        background: deepskyblue;
+        cursor: pointer;
+      }
+
+      .back:active {
+        background: rgba(0, 191, 255, 0.8);
+      }
+    }
+    .createBox {
+      /* background-color: blue; */
+      width: 100%;
+      height: 50%;
+
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      // height: 5vh;
+      /* position    : absolute; */
+    }
+  }
+
+  .boxBuscador {
+    color: white;
+    width: 80%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    /* align-items: center; */
+    /* margin-left: 1vw; */
+    margin-bottom: 7vh;
+
+    .inputConBoton {
+      border-bottom: 2px solid deepskyblue;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      width: 100%;
+      margin: 0 0 0 0;
+      /* background-color   : rgba(255, 255, 255, 0.2); */
+      border-radius: 1px;
+      /* padding            : 0 1px; */
+      transition: 0.2s;
+      form {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        width: 100%;
+        input {
+          color: deepskyblue;
+          width: 80%;
+          background: transparent;
+          border: none;
+          /* border-bottom   : 2px solid deepskyblue; */
+          /* box-shadow      :0px 10px 100px deeppink ; */
+          height: 100%;          
+        }
+
+
+        .boton {
+          color: rgba(255, 255, 255, 0.5);
+          background: transparent;
+          cursor: pointer;
+          border: none;
+          justify-content: center;
+          /* border-bottom: 2px solid deepskyblue; */
+          /* height: 100%; */
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          //  width: 20%; 
+          font-size: 1.5rem;
+          transition: 0.2s;
+          // background-color: red;
+        }
+        
+        .boton:hover {
+          /* background: rgba(0, 191, 255, 0.2); */
+          /* border-radius: 1px; */
+          color: deepskyblue;
+        }
+
+      }
+    }
+
+    .inputConBoton:hover {
+      background-color: rgba(0, 191, 255, 0.4);
+    }
+  }
 }
 
-
-.disabled{
+.disabled {
   position: absolute;
-  left:-75vw;
+  left: -75vw;
 }
 
 .navbarBox {
   width: 100%;
-}
-
-.boxBuscador {
-  color: white;
-  width: 80%;
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: column;
-  /* align-items: center; */
-  /* margin-left: 1vw; */
-  margin-bottom: 7vh;
 }
 
 .barrita {
@@ -72,16 +187,6 @@
   color: white;
 }
 
-.inputSearch {
-  color: deepskyblue;
-  width: 8vw;
-  background: transparent;
-  border: none;
-  /* border-bottom   : 2px solid deepskyblue; */
-  /* box-shadow      :0px 10px 100px deeppink ; */
-  height: 100%;
-}
-
 .boxOrdenador {
   /* margin-left: 1vw; */
   width: 80%;
@@ -89,31 +194,6 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-}
-
-.inputConBoton {
-  border-bottom: 2px solid deepskyblue;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  width: 100%;
-  margin: 0 0 0 0;
-  /* background-color   : rgba(255, 255, 255, 0.2); */
-  border-radius: 1px;
-  /* padding            : 0 1px; */
-  transition: 0.2s;
-}
-
-.inputConBoton input {
-  width: 70%;
-  height: 5vh;
-}
-
-.inputConBoton:hover {
-  background-color: rgba(0, 191, 255, 0.4);
 }
 
 .boton {
@@ -182,46 +262,6 @@
   background-color: rgba(0, 191, 255, 0.4);
 }
 
-.botonesBox {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.resetBox1 {
-  width: 100%;
-  display: flex;
-  height: 50%;
-}
-
-.back {
-  font-size: 1.5em;
-  color: black;
-  /* height                  : 50%; */
-  display: flex;
-  /* justify-content         : flex-end; */
-  align-items: center;
-  justify-content: center;
-  height: 4vh;
-  width: 2.8vw;
-  border: none;
-  background: rgba(255, 255, 255, 0.5);
-  border-radius: 50px;
-  /* padding                 : 2px; */
-  margin: 10px 5px;
-  transition: 0.2s;
-  position: absolute;
-}
-
-.back:hover {
-  background: deepskyblue;
-  cursor: pointer;
-}
-
-.back:active {
-  background: rgba(0, 191, 255, 0.8);
-}
-
 .resetBox {
   /* background-color: red; */
   width: 100%;
@@ -243,18 +283,6 @@
   padding: 3px;
   margin: 20px 5px;
   transition: 0.2s;
-}
-
-.createBox {
-  /* background-color: blue; */
-  width: 100%;
-  height: 50%;
-
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  height: 5vh;
-  /* position    : absolute; */
 }
 
 .create {
@@ -314,4 +342,36 @@ select:focus {
 
 input:focus {
   outline: none;
+}
+
+
+
+
+@media screen and (min-width: 650px) {
+
+.filter{
+  width: 40%;
+}
+
+}
+
+
+
+
+@media screen and (min-width: 1000px) {
+  .filter{
+    // width: 50vh;
+    position: relative;
+    // left: 0;
+grid-row: 1/2;
+width: 100%;
+
+  }
+
+  .disabled{
+    left:0
+  }
+
+  
+
 }
