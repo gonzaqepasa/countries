@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { Link } from "react-router-dom"
-import style from './style/Filter.module.css'
+import style from './style/Filter.module.scss'
 import { filtrarPorContinente, buscarPais, filtrarPorActividad } from "../actions/index.js"
 import { useDispatch, useSelector } from "react-redux"
 import { BiSearchAlt } from 'react-icons/bi'
