@@ -110,7 +110,7 @@ function Home() {
   return (
     <div className={style.home}>
       <button
-        className={filterActive?style.botonFilter:`${style.botonFilter} ${style.disabledButtom}`}
+        className={filterActive?`${style.botonFilter} ${style.disabledButtom}`:style.botonFilter}
         onClick={(e) => handleActiveFilter(e)}
       >
         {/* {filterActive ? <FontAwesomeIcon icon={faArrowCircleRight} />: <GiHamburgerMenu />} */}
@@ -123,6 +123,9 @@ function Home() {
         setPagina={setPagina}
         handleOrden={handleOrden}
       />
+
+
+      <h2>En este lugar iran hubicados los paises, coming soon</h2>
 
       {/*  <div className={style.cardsPag}>
         <Cards
