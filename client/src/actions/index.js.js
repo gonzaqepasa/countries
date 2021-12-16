@@ -5,12 +5,12 @@ import axios from 'axios';
 export function getCountries() {
     return async function (dispatch) {
         try {
-            var bdData = await axios.get('http://localhost:3001/countries');
+            var bdData = await axios.get('/countries');
             return dispatch({
                 type: 'GET_COUNTRIES',
                 payload: bdData.data
             })
-        } catch (err) { console.log(err) }
+        } catch (err) {  return dispatch({ type: 'GET_ACTIVITIES_ERROR', payload: err })  }
     }
 }
 /////////////////////////////
@@ -94,7 +94,7 @@ export function reset() {
 export function buscarPais(pais) {
     return async function (dispatch) {
         try {
-            var bdData = await axios.get(`http://localhost:3001/countries?name=${pais}`);
+            var bdData = await axios.get(`/countries?name=${pais}`);
             return dispatch({
                 type: 'BUSCADOR',
                 payload: bdData.data
@@ -106,7 +106,7 @@ export function buscarPais(pais) {
 
 export function postActivity(payload) {
     // return async function () {
-    axios.post('http://localhost:3001/activity', payload)
+    axios.post('/activity', payload)
     return {
         type: 'POST_ACTIVITY'
     }
@@ -120,7 +120,7 @@ export function getDetail(id) {
 
 
         try {
-            const info = await axios.get('http://localhost:3001/countries/' + id)
+            const info = await axios.get('/countries/' + id)
             console.log(info.data[0])
             return dispatch({
                 type: 'GET_DETAIL',
@@ -145,12 +145,12 @@ export function getActivities() {
     return async function (dispatch) {
 
         try {
-            const get = await axios.get('http://localhost:3001/activities')
+            const get = await axios.get('/activities')
             return dispatch({
                 type: 'GET_ACTIVITIES',
                 payload: get.data
             })
-        } catch (err) { console.log(err) }
+        } catch (err) {console.log(err)}
     }
 }
 /////////////////////////////

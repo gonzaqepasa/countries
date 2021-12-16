@@ -2,11 +2,11 @@
   /* background: rgb(255,255,255); */
   /* background: linear-gradient(29deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 21%, rgba(177,177,182,1) 79%, rgba(127,127,135,1) 100%);kground: linear-gradient(225deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 21%, rgba(177,177,182,1) 56%, rgba(127,127,135,1) 100%); */
 
-  height: 100vh;
+  /* height: 100vh; */
   display                  : flex;
   flex-direction: column;
   align-items: center;
-  justify-items: center;
+  /* justify-items: center; */
   /* flex-wrap             : wrap; */
   background-color: deepskyblue;
   width: 100vw;
@@ -18,8 +18,8 @@
 }
 
 .botonFilter {
-  position: absolute;
-  top: 2vh;
+  position: fixed;
+  top: 3vh;
   right: 1vw;
   font-size: 2.5rem;
   background-color: transparent;
@@ -28,11 +28,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 9600;
+  filter: drop-shadow(1px 1px 3px white);
+
   
 }
 .botonFilter:hover {
   /* color: white; */
-  filter: drop-shadow(0px 0px 6px white );
+  filter: drop-shadow(0px 0px 6px deepskyblue);
 
 }
 .botonFilter:active {
@@ -45,8 +48,15 @@
 
 .cardsPag {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  grid-column: 2/3;
+  /* background-color: red; */
+  width: 100%;
+  /* height: 100%; */
+  margin: 0;
+  
 }
 
 /* .img{
