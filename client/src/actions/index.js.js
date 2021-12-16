@@ -10,7 +10,7 @@ export function getCountries() {
                 type: 'GET_COUNTRIES',
                 payload: bdData.data
             })
-        } catch (err) { console.log(err) }
+        } catch (err) {  return dispatch({ type: 'GET_ACTIVITIES_ERROR', payload: err })  }
     }
 }
 /////////////////////////////
@@ -150,7 +150,7 @@ export function getActivities() {
                 type: 'GET_ACTIVITIES',
                 payload: get.data
             })
-        } catch (err) { console.log(err) }
+        } catch (err) {console.log(err)}
     }
 }
 /////////////////////////////

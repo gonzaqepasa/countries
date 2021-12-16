@@ -38,7 +38,12 @@ export default function rootReducer(state = initialState, action) {
             countriesToSearch: action.payload
         }
         //////////////////////////////
+        case 'GET_ACTIVITIES_ERROR': return {
+            ...state,
+            countries: [action.payload],
 
+        }
+        //////////////////////////////
 
         case 'CHANGE_PAG': return {
             ...state,

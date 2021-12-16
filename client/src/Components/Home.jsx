@@ -110,7 +110,11 @@ function Home() {
   return (
     <div className={style.home}>
       <button
-        className={filterActive?`${style.botonFilter} ${style.disabledButtom}`:style.botonFilter}
+        className={
+          filterActive
+            ? `${style.botonFilter} ${style.disabledButtom}`
+            : style.botonFilter
+        }
         onClick={(e) => handleActiveFilter(e)}
       >
         {/* {filterActive ? <FontAwesomeIcon icon={faArrowCircleRight} />: <GiHamburgerMenu />} */}
@@ -124,10 +128,9 @@ function Home() {
         handleOrden={handleOrden}
       />
 
+      {/* <h2>En este lugar iran hubicados los paises, coming soon</h2> */}
 
-      <h2>En este lugar iran hubicados los paises, coming soon</h2>
-
-      {/*  <div className={style.cardsPag}>
+      <div className={style.cardsPag}>
         <Cards
           countries={allCountries}
           paisesActualesEnPagina={paisesActualesEnPagina}
@@ -135,7 +138,7 @@ function Home() {
           paisesXPagina={paisesXPagina}
           pagina={pagina}
         />
-
+        
         <Paginado
           allCountries={allCountries.length}
           paisesXPagina={paisesXPagina}
@@ -143,8 +146,8 @@ function Home() {
           cambiarPag={cambiarPag}
           aumentarPag={aumentarPag}
           reducirPag={reducirPag}
-        />
-      </div> */}
+        /> 
+      </div>
     </div>
   );
 }

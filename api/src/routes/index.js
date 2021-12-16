@@ -95,7 +95,7 @@ router.get('/countries', async (req, res) => {
         let countryName = await allCountry.filter(paises => paises.name.toLowerCase().includes(name.toLowerCase()))
         countryName.length ?
             res.status(200).send(countryName) :
-            res.status(404).send("i'm Sorry")
+            res.status(200).send(allCountry)
     } else {
         res.status(200).send(allCountry)
     }
