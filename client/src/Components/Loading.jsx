@@ -1,6 +1,6 @@
 import React from "react";
-import style from './style/Loading.module.css';
-
+import style from './style/Loading.module.scss';
+import loading from './style/loading.gif'
 
 
 export default function Loading() {
@@ -12,7 +12,7 @@ export default function Loading() {
         <div className={style.loadingBox}>
 
 
-            <h2> Espere...</h2>
+            <img src={loading} alt="No img" />
 
         </div>
     )

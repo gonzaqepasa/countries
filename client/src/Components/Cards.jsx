@@ -8,7 +8,7 @@ import img from "./style/mundogirando.gif";
 
 export default function Cards(props) {
   const paises = useSelector((state) => state.countries);
-  //   console.log(paises);
+    console.log(paises);
 
   function render() {
     return paises.length > 1 ? (
@@ -23,8 +23,11 @@ export default function Cards(props) {
       ))
     ) : (
       <div className={style.error}>
+        <h2>Falta conectar la base de datos</h2>
         <h2>{paises[0].message}</h2>
-        <h2>{paises[0].response.statusText}</h2>
+
+        {/* <h2>{paises[0].message}</h2> */}
+        {/* <h2>{paises[0].response.statusText}</h2> */}
 
       </div>
     );
@@ -32,7 +35,7 @@ export default function Cards(props) {
 
   return (
     <div className={paises.length > 1?style.cards: `${style.cards} ${style.card100}`}>
-      {props.paisesActualesEnPagina.length ? render() : <Loading />}
+       {props.paisesActualesEnPagina.length ? render() : <Loading />} 
 
       {/*  <Paginado
                 allCountries={props.countries.length}
@@ -42,4 +45,5 @@ export default function Cards(props) {
  */}
     </div>
   );
+  
 }
