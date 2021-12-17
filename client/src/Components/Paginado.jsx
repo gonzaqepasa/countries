@@ -27,7 +27,7 @@ export default function Paginado({
 
 
   /////////Estado de activacion de paginado ////////
-const [pagActive,setPagActive] = useState(true)
+const [pagActive,setPagActive] = useState(false)
 
   /////////////////////////////////////////////
 

@@ -90,6 +90,7 @@ function Home() {
     dispatch(reset());
     dispatch(getCountries());
     setPagina(1);
+    setFilterActive(false)
   }
   ////////////////////////////
 
