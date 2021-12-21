@@ -117,9 +117,9 @@ router.get('/countries/:id', async (req, res) => {
 
         countriesFilter.length ?
             res.status(200).send(countriesFilter) :
-            res.status(404).send("I´m sorry :P")
+            res.status(404).send(['error',"No se encontro pais con esa ID asi que chau xd"])
     } else {
-        res.send(allCountries)
+        res.status(404).send('No se encontro la ID')
     }
 })
 

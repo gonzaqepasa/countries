@@ -10,7 +10,7 @@ export function getCountries() {
                 type: 'GET_COUNTRIES',
                 payload: bdData.data
             })
-        } catch (err) {  return dispatch({ type: 'GET_ACTIVITIES_ERROR', payload: err })  }
+        } catch (err) { return dispatch({ type: 'GET_ACTIVITIES_ERROR', payload: err }) }
     }
 }
 /////////////////////////////
@@ -121,12 +121,17 @@ export function getDetail(id) {
 
         try {
             const info = await axios.get('/countries/' + id)
-            console.log(info.data[0])
+            // console.log(info.data[0])
             return dispatch({
                 type: 'GET_DETAIL',
                 payload: info.data
             })
-        } catch (err) { console.log(err) }
+        } catch (err) {
+            return dispatch({
+                type: 'GET_DETAIL',
+                payload: err
+            })
+        }
 
 
     }
@@ -150,7 +155,7 @@ export function getActivities() {
                 type: 'GET_ACTIVITIES',
                 payload: get.data
             })
-        } catch (err) {console.log(err)}
+        } catch (err) { console.log(err) }
     }
 }
 /////////////////////////////
