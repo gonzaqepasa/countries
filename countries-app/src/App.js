@@ -1,27 +1,16 @@
+import logo from './logo.svg';
 import './App.css';
 import { Route, Switch } from 'react-router-dom'
 import Home from './Components/Home';
 import Page from './Components/Page';
 import Details from './Components/Details';
 import CreateActivity from './Components/CreateActivity';
-// import Filter from './Components/Filter';
-
-
 
 function App() {
-
-
-
-
-
-
-
   return (
     <div className="App">
-
-
-      <Switch>
-
+     
+{/* 
         <Route path='/' exact>
           <Page />
 
@@ -32,12 +21,12 @@ function App() {
         </Route>
 
 
-        <Route path='/home' exact>
+        <Route path='/home' exact> */}
 
           <Home />
 
 
-
+{/* 
         </Route>
 
 
@@ -49,17 +38,16 @@ function App() {
         <Route path='/activities' >
 
           <CreateActivity />
-        </Route>
+        </Route> */}
 
 
 
 
 
-      </Switch>
+   
 
 
-
-    </div >
+    </div>
   );
 }
 
